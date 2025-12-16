@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find your aesthetic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Gowun+Batang&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--네비게이션 바-->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html#home" id="logo"><img src="/images/logo.png" alt="logo" width="50" height="24"></a>
+      </div>
+      <div class="menu">
+        <a href="index.html#intro">INTRO</a>
+        <a href="index.html#board">BOARD</a>
+        <a href="test.html">TEST</a>
+
+        <div class="dropdown"> <a href="#community" class="dropdown-toggle">COMMUNITY</a>
+          <div class="dropdown-menu">
+            <a href="share.html">SHARE</a>
+            <a href="talk.html">TALK</a>
+          </div>
+        </div>
+        <a href="login.html" class="login-link">
+          <i class="bi bi-person-circle" style="font-size: 1.3rem;"></i>
+        </a>
+      </div>
+    </nav>
+
+    <!--핀터레스트 보드 레이아웃-->
+    <section class="share-board">
+        <h1 id="share">Aesthetic Share</h1>
+        
+        <div class="share-toolbar">
+          <!-- 검색창 -->
+          <div class="share-search">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search aesthetic, style, tag...">
+          </div>
+
+          <!-- 정렬 드롭다운 (Bootstrap) -->
+          <div class="dropdown sort-dropdown">
+            <button class="sort-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="currentSort">인기순</span>
+            </button>
+
+            <ul class="dropdown-menu sort-menu">
+              <li><button class="dropdown-item" data-sort="popular">인기순</button></li>
+              <li><button class="dropdown-item" data-sort="saved">저장순</button></li>
+              <li><button class="dropdown-item" data-sort="latest">최신순</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container">
+            <a href="detail.html?img=images/img1.png" class="box" data-id="1"><img src="images/img1.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img2.png" class="box" data-id="2"><img src="images/img2.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img3.png" class="box" data-id="3"><img src="images/img3.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img4.png" class="box" data-id="4"><img src="images/img4.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img5.png" class="box" data-id="5"><img src="images/img5.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img6.png" class="box" data-id="6"><img src="images/img6.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img7.png" class="box" data-id="7"><img src="images/img7.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img8.png" class="box" data-id="8"><img src="images/img8.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img9.png" class="box" data-id="9"><img src="images/img9.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img10.png" class="box" data-id="10"><img src="images/img10.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img11.png" class="box" data-id="11"><img src="images/img11.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img12.png" class="box" data-id="12"><img src="images/img12.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img13.png" class="box" data-id="13"><img src="images/img13.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img14.png" class="box" data-id="14"><img src="images/img14.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img15.png" class="box" data-id="15"><img src="images/img15.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img16.png" class="box" data-id="16"><img src="images/img16.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+            <a href="detail.html?img=images/img17.png" class="box" data-id="17"><img src="images/img17.png"><button class="save-btn"><i class="bi bi-bookmark"></i></button></a>
+        </div>
+    </section>
+
+    <!-- 가운데 하단 + 버튼 -->
+    <button class="plus-button"><i class="bi bi-plus-lg"></i></button>
+
+
+    <!--footer-->
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a href="index.html#home">Find Your Aesthetic</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#board">Board</a>
+        <a href="index.html#community">Community</a>
+      </div>
+
+      <div class="footer-info">
+        <p>개인정보처리방침 서비스 이용약관 이메일무단수집거부 저작권 지식재산 등록</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-globe2"></i></a>
+      </div>
+      <a href="#" class="scroll-top" title="맨 위로 이동"><i class="bi bi-arrow-up"></i></a>
+    </footer>
+    
+    <!--이미지 설명창-->
+    <div class="detail-wrapper" id="detailWrapper">
+      <div class="detail-card">
+
+        <div class="detail-image">
+          <button class="detail-close" id="detailClose"><i class="bi bi-x"></i></button>
+          <img id="detailImg" src="">
+        </div>
+
+        <div class="detail-info">
+          <div class="detail-header">
+            <div class="user">
+              <img id="detailProfile" class="profile">
+              <span class="username" id="detailUsername"></span>
+              <span class="meta" id="detailMeta"></span>
+            </div>
+            <button class="follow-btn">팔로우</button>
+          </div>
+
+          <p class="detail-desc" id="detailDesc"></p>
+
+          <div class="detail-actions">
+            <button><i class="bi bi-heart"></i></button>
+            <button><i class="bi bi-chat"></i></button>
+            <button><i class="bi bi-upload"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+      const DETAIL_DATA = {
+    1: {
+    img: "images/img1.png",
+    profile: "images/profile1.jpg",
+    username: "NCT정우",
+    meta: "161cm · 50kg",
+    desc: "#acubi_core #balletcore"
+  },
+  2: {
+    img: "images/img2.png",
+    profile: "images/profile2.png",
+    username: "윈터",
+    meta: "164cm · 47kg",
+    desc: "#y2k #street"
+  },
+  3: {
+    img: "images/img3.png",
+    profile: "images/profile3.png",
+    username: "카리나",
+    meta: "167cm · 48kg",
+    desc: "#chic #minimal"
+  },
+  4: {
+    img: "images/img4.png",
+    profile: "images/profile4.png",
+    username: "로제",
+    meta: "168cm · 46kg",
+    desc: "#modern #black"
+  },
+  5: {
+    img: "images/img5.png",
+    profile: "images/profile5.jpg",
+    username: "제니",
+    meta: "163cm · 45kg",
+    desc: "#luxury #chanel"
+  },
+  6: {
+    img: "images/img6.png",
+    profile: "images/profile6.jpg",
+    username: "민지",
+    meta: "165cm · 49kg",
+    desc: "#casual #daily"
+  },
+  7: {
+    img: "images/img7.png",
+    profile: "images/profile7.jpg",
+    username: "하니",
+    meta: "161cm · 47kg",
+    desc: "#girly #soft"
+  },
+  8: {
+    img: "images/img8.png",
+    profile: "images/profile8.jpg",
+    username: "다니엘",
+    meta: "165cm · 50kg",
+    desc: "#teen #natural"
+  },
+  9: {
+    img: "images/img9.png",
+    profile: "images/profile9.jpg",
+    username: "카즈하",
+    meta: "170cm · 48kg",
+    desc: "#balletcore #elegant"
+  },
+  10: {
+    img: "images/img10.png",
+    profile: "images/profile10.jpg",
+    username: "사쿠라",
+    meta: "163cm · 46kg",
+    desc: "#cute #layered"
+  },
+  11: {
+    img: "images/img11.png",
+    profile: "images/profile11.jpg",
+    username: "안유진",
+    meta: "170cm · 48kg",
+    desc: "#idol #sporty"
+  },
+  12: {
+    img: "images/img12.png",
+    profile: "images/profile12.jpg",
+    username: "장원영",
+    meta: "173cm · 47kg",
+    desc: "#princess #pink"
+  },
+  13: {
+    img: "images/img13.png",
+    profile: "images/profile13.jpg",
+    username: "아이린",
+    meta: "160cm · 44kg",
+    desc: "#clean #simple"
+  },
+  14: {
+    img: "images/img14.png",
+    profile: "images/profile14.jpg",
+    username: "슬기",
+    meta: "162cm · 49kg",
+    desc: "#dance #street"
+  },
+  15: {
+    img: "images/img15.png",
+    profile: "images/profile15.jpg",
+    username: "태연",
+    meta: "158cm · 45kg",
+    desc: "#vintage #warm"
+  },
+  16: {
+    img: "images/img16.png",
+    profile: "images/profile16.jpg",
+    username: "리즈",
+    meta: "171cm · 50kg",
+    desc: "#tall #minimal"
+  },
+  17: {
+    img: "images/img17.png",
+    profile: "images/profile17.jpg",
+    username: "아이유",
+    meta: "162cm · 45kg",
+    desc: "#romantic #soft"
+  }
+};
+</script>
+<script>
+const boxes = document.querySelectorAll('.box');
+const wrapper = document.getElementById('detailWrapper');
+
+const detailImg = document.getElementById('detailImg');
+const detailProfile = document.getElementById('detailProfile');
+const detailUsername = document.getElementById('detailUsername');
+const detailMeta = document.getElementById('detailMeta');
+const detailDesc = document.getElementById('detailDesc');
+const closeBtn = document.getElementById('detailClose');
+
+boxes.forEach(box => {
+  box.addEventListener('click', e => {
+    e.preventDefault();
+
+    const id = box.dataset.id;   // 🔥 data-id 사용
+    const data = DETAIL_DATA[id];
+
+    if (!data) return;
+
+    detailImg.src = data.img;
+    detailProfile.src = data.profile;
+    detailUsername.textContent = data.username;
+    detailMeta.textContent = data.meta;
+    detailDesc.textContent = data.desc;
+
+    wrapper.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  wrapper.style.display = 'none';
+  document.body.style.overflow = '';
+});
+</script>
+  </body>
+</html>

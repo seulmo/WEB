@@ -1,0 +1,687 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f6efe7;}
+
+h1 {font-family: 'Cormorant Garamond', 'Gowun Batang', serif;}
+
+h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
+
+/*네비게이션바*/
+.navbar {
+  position: fixed;          /* 화면 상단에 고정 */
+  top: 20px;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 32px;
+  background-color: rgba(255, 255, 255, 0.2); /* 투명한 흰색 배경 */
+  backdrop-filter: blur(6px); /* 배경 흐림 효과로 감성 강화 */
+  color: #ffffff;
+  transition: all 0.3s ease;
+  z-index: 1000;    /* 다른 요소 위에 표시 */}
+.navbar a {
+  color: #ffffff;           /* 글씨는 흰색 */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  /* margin: 0 15px; */ /* 제거 */
+  transition: color 0.3s ease;}
+.navbar a:hover {color: #402d16;}
+
+.navbar.scrolled {
+  background-color: #ffffff; /* 불투명 흰색 */
+  color: #402d16; /* 진한 갈색 글씨 */}
+.navbar.scrolled a {color: #402d16; /* 스크롤 후 글씨 색상 */
+  font-weight: bold;} /* 굵기 유지 */
+.navbar.scrolled a:hover {
+  color: #6b8f71; /* hover */
+  font-weight: 800;}
+
+/*드롭다운*/
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 35px; /* 네비게이션 링크 간 간격 통일 */
+}
+.menu a,
+.menu .dropdown {
+  display: inline-block;
+  position: relative;
+}
+/* 드롭다운 토글 버튼 스타일 - 일반 상태 */
+.dropdown-toggle {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+}
+.navbar.scrolled .dropdown-toggle { /* 스크롤 상태 드롭다운 토글 색상 */
+    color: #402d16;
+}
+.navbar.scrolled .dropdown-toggle:hover {
+    color: #6b8f71;
+}
+/* 드롭다운 메뉴 스타일 (스크롤 전: 투명 배경, 흰색 글씨) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.2); /* ⭐️ 수정: 스크롤 전 투명 배경 */
+  backdrop-filter: blur(5px);
+  border-radius: 6px;
+  padding: 10px 0;
+  box-shadow: none; /* ⭐️ 수정: 투명 배경에선 그림자 제거 */
+  min-width: 140px;
+  z-index: 1001;
+}
+/* ⭐️ 스크롤 시 드롭다운 메뉴 스타일 (스크롤 후: 흰색 배경, 갈색 글씨) */
+.navbar.scrolled .dropdown-menu {
+  background-color: #ffffff; /* 불투명 흰색 */
+  backdrop-filter: none; /* 흐림 효과 제거 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 스크롤 시 그림자 추가 */
+}
+/* 드롭다운 메뉴 안의 링크 스타일 (스크롤 전: 흰색 글씨) */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: #ffffff; /* ⭐️ 수정: 스크롤 전 흰색 글씨 */
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center; 
+}
+
+/* ⭐️ 스크롤 시 드롭다운 메뉴 안의 링크 글씨색 변경 */
+.navbar.scrolled .dropdown-menu a {
+  color: #402d16; /* 갈색 글씨 */
+}
+/* 호버 스타일 (스크롤 전) */
+.dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* ⭐️ 수정: 스크롤 전 호버 시 배경 투명 유지 */
+  color: #402d16; /* 글씨색은 scrolled 글씨색과 유사하게 */
+  font-weight: 600;
+}
+/* 호버 스타일 (스크롤 후) */
+.navbar.scrolled .dropdown-menu a:hover {
+  background-color: #f5f5f5;
+  color: #6b8f71;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/*메인홈*/
+.home-header {
+  height: 100vh;
+  background-image: linear-gradient(to top, rgba(246, 239, 231, 0.1), rgba(246, 239, 231, 0.05)), url(images/home_bg.png);
+  background-size: cover;
+  background-position: center 55%;
+  background-attachment: fixed;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: flex-end;
+  text-align: right;
+  padding: 0 7% 15% 0;
+  position: relative;}
+
+.header-text h1 {
+  font-size: 113px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 40px;}
+
+.header-text button {
+  position: absolute;
+  opacity: 0.9; 
+  left: 60%;
+  bottom: 28%;                    /* h1 기준으로 아래쪽 중앙 배치 */
+  padding: 12px 28px;
+  font-size: 16px;
+  background-color: #7c5c3b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;}
+
+.header-text button:hover {background-color: #6b8f71;}
+
+
+/*메인-인트로*/
+.main-section {
+  min-height: 100vh;
+  background-color: #f6efe7;
+  padding: 0 10% 10% 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;}
+
+.section-content {
+  flex: 1;
+  text-align: center;
+  color: #402d16;
+  transform: translateY(25px);}
+
+.section-content h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 150px;}
+
+.section-content h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;}
+
+.section-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 40px;}
+
+.section-content .underline {
+  width: 60px;
+  height: 2px;
+  background-color: #402d16;
+  margin: 0 auto 60px;}
+
+.section-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;}
+
+.section-box {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;}
+
+.section-box:hover {
+  transform: translateY(-4px);}
+
+.section-box span {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;}
+
+.section-box small {
+  font-size: 13px;
+  color: #6b5c4e;}
+
+/*이미지*/
+.section1-image {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;}
+
+.section1-image img {
+  width: 100%;
+  object-fit: cover;
+  margin-left: 20%;
+  transform: translateY(120px);}
+
+
+/* 메인-보드 */
+#board {
+  scroll-margin-top: 120px;
+}
+
+.aesthetic-gallery h1 {
+  font-size: 55px;
+  font-weight: 800;
+  font-family: 'Cormorant Garamond', serif;
+  color: #402d16;
+  text-align: center;
+  margin: 100px 0 20px;
+}
+
+.gallery-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px; /* 이미지 간격 */
+  padding: 0 8%;
+}
+
+.item {
+  position: relative;
+  border: 2px solid #ebd9c5;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.item img {
+  width: 100%;
+  height: 230px; /* 모든 이미지 동일 높이 */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* 중앙 텍스트 */
+.caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* 태블릿 (992px 이하): 4열로 전환 */
+@media (max-width: 992px) {
+  .gallery-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 모바일 가로 (768px 이하): 3열로 전환 */
+@media (max-width: 768px) {
+  .gallery-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 모바일 세로 (576px 이하): 2열로 전환 */
+@media (max-width: 576px) {
+  .gallery-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 오버레이 */
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* hover 효과 */
+.item:hover img {
+  transform: scale(1.03);
+}
+.item:hover .caption {
+  opacity: 1;
+}
+.item:hover::after {
+  opacity: 0.3;
+}
+
+
+
+/* 무드별 색상 */
+.clean-girl:hover { border-color: #a3c4bc; }
+.clean-girl::after { background: #a3c4bc; }
+
+.acubi-core:hover { border-color: #b0a8b9; }
+.acubi-core::after { background: #b0a8b9; }
+
+.coquette-core:hover { border-color: #f2c1d1; }
+.coquette-core::after { background: #f2c1d1; }
+
+.dark-academia:hover { border-color: #5c4b3b; }
+.dark-academia::after { background: #5c4b3b; }
+
+.light-academia:hover { border-color: #d9c7a3; }
+.light-academia::after { background: #d9c7a3; }
+
+.balletcore:hover { border-color: #f7d6e0; }
+.balletcore::after { background: #f7d6e0; }
+
+.grunge-fairy:hover { border-color: #7a5c7c; }
+.grunge-fairy::after { background: #7a5c7c; }
+
+.mob-wife:hover { border-color: #8b2f2f; }
+.mob-wife::after { background: #8b2f2f; }
+
+.tomato-girl:hover { border-color: #e85c4f; }
+.tomato-girl::after { background: #e85c4f; }
+
+.rockstar-gf:hover { border-color: #2c2c2c; }
+.rockstar-gf::after { background: #2c2c2c; }
+
+
+/*테스트버튼*/
+.test-callout {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  color: #402d16;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;}
+.test-button {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 80px;
+  padding: 15px 60px;
+  background-color: #6b8f71;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+.test-button:hover {
+  background-color: #5a7f62;
+}
+
+/* 푸터 */
+.site-footer {
+  background-color: #ae8f6e; /* 진한 갈색 톤 */
+  color: #fff;
+  padding: 40px 10% 50px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+  position: relative;
+  text-decoration: none; 
+}
+.footer-brand {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.site-footer a {
+  color: inherit;           /* 부모 색상 따라감 */
+  text-decoration: none;   /* 밑줄 제거 */
+}
+.footer-links a {
+  color: #fff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer-social a {
+  font-size: 20px;
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.footer-social a:hover {
+  color: #d87c3f;
+}
+
+/* 오른쪽 하단 위로가기 버튼 */
+.scroll-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #d0b496;
+  color: #fff;
+  font-size: 24px;
+  padding: 12px 12px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+.scroll-top:hover {
+  background-color: #b48a65;
+}
+
+/* 1. 기본 레이아웃 및 헤더 스타일 */
+/* ------------------------------------------- */
+.talk-section {
+    padding-top: 0; /* 네비게이션바 아래 공간 확보 */
+    background-color: #f6efe7;
+    min-height: 100vh;
+}
+
+.talk-header {
+    padding-top: 120px;
+    background-image: linear-gradient(to top,rgba(64, 45, 22, 0.4), rgba(64, 45, 22, 0.1)), url(images/talk_bg.jpg);
+    background-size: cover;
+    background-position: center; /* 이미지를 상단 중앙에 배치 */
+    min-height: 400px; /* ⭐️ 수정: 배경 이미지가 더 넓게 보이도록 높이 증가 */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* 기존 스타일 */
+    text-align: center;
+    padding-bottom: 40px; /* 하단 패딩 */
+    margin-bottom: 80px; /* 헤더와 탭 사이 간격은 탭에 마진으로 줄 예정 */
+}
+
+.talk-title {
+    font-size: 55px;
+    font-weight: 800;
+    font-family: 'Cormorant Garamond', serif;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.talk-description {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* ------------------------------------------- */
+/* 2. 탭/카테고리 스타일 */
+/* ------------------------------------------- */
+.category-tabs {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.tab-btn {
+    background-color: #f5f5f5;
+    color: #402d16;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+
+.tab-btn i {
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background-color: #6b8f71; /* 녹색 포인트 */
+    color: #ffffff;
+    border-color: #6b8f71;
+}
+
+/* ------------------------------------------- */
+/* 3. 게시판 (Masonry) 스타일 */
+/* ------------------------------------------- */
+.talk-board-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+    margin-bottom: 100px;
+    
+    /* Masonry 레이아웃 설정 */
+    columns: 4; /* 기본 4열 */
+    column-gap: 20px;
+    padding: 0 20px;
+}
+
+/* 게시글 박스 스타일 */
+.post-box {
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid; /* 열 사이에서 잘리는 것 방지 */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.post-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post-box img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* ⭐️ 게시글 헤더 (이미지 2, 3번의 상단 프로필/더보기 영역) */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.profile-icon {
+    font-size: 1.5rem;
+    color: #6b5c4e; /* 갈색 계열 */
+}
+.user-nickname {
+    font-weight: 700;
+    color: #402d16;
+    font-size: 0.9rem;
+}
+.more-btn {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* ⭐️ 게시글 내용 및 액션 */
+.post-content {
+    padding: 15px;
+}
+.post-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #402d16;
+    margin-bottom: 5px;
+}
+.post-text {
+    font-size: 0.95rem;
+    color: #6b5c4e;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+.post-tags {
+    font-size: 0.8rem;
+    color: #6b8f71; /* 녹색 포인트 */
+    font-weight: 500;
+}
+
+/* 액션 버튼 (좋아요/댓글 및 시간) */
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-top: 1px solid #f0f0f0;
+}
+.actions-left {
+    display: flex;
+    gap: 15px;
+}
+.action-btn {
+    background: none;
+    border: none;
+    color: #402d16;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+}
+.post-time {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* ------------------------------------------- */
+/* 4. 우측 하단 글쓰기 버튼 */
+/* ------------------------------------------- */
+.write-button {
+    position: fixed;
+    bottom: 40px;
+    right: 110px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #6b8f71; /* 녹색 포인트 */
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+.write-button:hover {
+    background-color: #5a7f62;
+    transform: scale(1.05);
+}
+
+/* ------------------------------------------- */
+/* 5. 반응형 (열 개수 조정) */
+/* ------------------------------------------- */
+@media (max-width: 1200px) {
+    .talk-board-container {
+        columns: 3;
+    }
+}
+@media (max-width: 768px) {
+    .talk-board-container {
+        columns: 2;
+    }
+}
+@media (max-width: 480px) {
+    .talk-board-container {
+        columns: 1;
+    }
+}
