@@ -9,7 +9,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 
 /*네비게이션바*/
 .navbar {
-  position: fixed;          /* 화면 상단에 고정 */
+  position: fixed;         
   top: 20px;
   left: 50%;
   width: 90%;
@@ -20,41 +20,40 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   align-items: center;
   gap: 40px;
   padding: 20px 32px;
-  background-color: rgba(255, 255, 255, 0.2); /* 투명한 흰색 배경 */
-  backdrop-filter: blur(6px); /* 배경 흐림 효과로 감성 강화 */
+  background-color: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(6px); 
   color: #ffffff;
   transition: all 0.3s ease;
-  z-index: 1000;    /* 다른 요소 위에 표시 */}
+  z-index: 1000;}
 .navbar a {
-  color: #ffffff;           /* 글씨는 흰색 */
+  color: #ffffff;          
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  /* margin: 0 15px; */ /* 제거 */
   transition: color 0.3s ease;}
 .navbar a:hover {color: #402d16;}
 
 .navbar.scrolled {
-  background-color: #ffffff; /* 불투명 흰색 */
-  color: #402d16; /* 진한 갈색 글씨 */}
-.navbar.scrolled a {color: #402d16; /* 스크롤 후 글씨 색상 */
-  font-weight: bold;} /* 굵기 유지 */
+  background-color: #ffffff; 
+  color: #402d16; }
+.navbar.scrolled a {color: #402d16; 
+  font-weight: bold;} 
 .navbar.scrolled a:hover {
-  color: #6b8f71; /* hover */
+  color: #6b8f71; 
   font-weight: 800;}
 
 /*드롭다운*/
 .menu {
   display: flex;
   align-items: center;
-  gap: 35px; /* 네비게이션 링크 간 간격 통일 */
+  gap: 35px; 
 }
 .menu a,
 .menu .dropdown {
   display: inline-block;
   position: relative;
 }
-/* 드롭다운 토글 버튼 스타일 - 일반 상태 */
+/* 드롭다운 토글 버튼 스타일 */
 .dropdown-toggle {
   color: #ffffff;
   text-decoration: none;
@@ -62,38 +61,38 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   font-weight: bold;
   padding: 0;
 }
-.navbar.scrolled .dropdown-toggle { /* 스크롤 상태 드롭다운 토글 색상 */
+.navbar.scrolled .dropdown-toggle { 
     color: #402d16;
 }
 .navbar.scrolled .dropdown-toggle:hover {
     color: #6b8f71;
 }
-/* 드롭다운 메뉴 스타일 (스크롤 전: 투명 배경, 흰색 글씨) */
+/* 드롭다운 메뉴 스타일 */
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.2); /* ⭐️ 수정: 스크롤 전 투명 배경 */
+  background-color: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(5px);
   border-radius: 6px;
   padding: 10px 0;
-  box-shadow: none; /* ⭐️ 수정: 투명 배경에선 그림자 제거 */
+  box-shadow: none; 
   min-width: 140px;
   z-index: 1001;
 }
-/* ⭐️ 스크롤 시 드롭다운 메뉴 스타일 (스크롤 후: 흰색 배경, 갈색 글씨) */
+/* 스크롤 시 드롭다운 메뉴 스타일 */
 .navbar.scrolled .dropdown-menu {
-  background-color: #ffffff; /* 불투명 흰색 */
-  backdrop-filter: none; /* 흐림 효과 제거 */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 스크롤 시 그림자 추가 */
+  background-color: #ffffff; 
+  backdrop-filter: none; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
 }
-/* 드롭다운 메뉴 안의 링크 스타일 (스크롤 전: 흰색 글씨) */
+/* 드롭다운 메뉴 안의 링크 스타일 (스크롤 전) */
 .dropdown-menu a {
   display: block;
   padding: 10px 16px;
-  color: #ffffff; /* ⭐️ 수정: 스크롤 전 흰색 글씨 */
+  color: #ffffff; 
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -101,14 +100,14 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   text-align: center; 
 }
 
-/* ⭐️ 스크롤 시 드롭다운 메뉴 안의 링크 글씨색 변경 */
+/* 스크롤 시 드롭다운 메뉴 안의 링크 글씨색 변경 */
 .navbar.scrolled .dropdown-menu a {
-  color: #402d16; /* 갈색 글씨 */
+  color: #402d16; 
 }
 /* 호버 스타일 (스크롤 전) */
 .dropdown-menu a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* ⭐️ 수정: 스크롤 전 호버 시 배경 투명 유지 */
-  color: #402d16; /* 글씨색은 scrolled 글씨색과 유사하게 */
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #402d16; 
   font-weight: 600;
 }
 /* 호버 스타일 (스크롤 후) */
@@ -146,7 +145,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   position: absolute;
   opacity: 0.9; 
   left: 60%;
-  bottom: 28%;                    /* h1 기준으로 아래쪽 중앙 배치 */
+  bottom: 28%;                    
   padding: 12px 28px;
   font-size: 16px;
   background-color: #7c5c3b;
@@ -256,7 +255,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 .gallery-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px; /* 이미지 간격 */
+  gap: 10px; 
   padding: 0 8%;
 }
 
@@ -269,7 +268,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 
 .item img {
   width: 100%;
-  height: 230px; /* 모든 이미지 동일 높이 */
+  height: 230px; 
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -391,7 +390,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 
 /* 푸터 */
 .site-footer {
-  background-color: #ae8f6e; /* 진한 갈색 톤 */
+  background-color: #ae8f6e; 
   color: #fff;
   padding: 40px 10% 50px;
   text-align: center;
@@ -406,8 +405,8 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   margin-bottom: 20px;
 }
 .site-footer a {
-  color: inherit;           /* 부모 색상 따라감 */
-  text-decoration: none;   /* 밑줄 제거 */
+  color: inherit;           
+  text-decoration: none;   
 }
 .footer-links a {
   color: #fff;
@@ -444,10 +443,10 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   background-color: #b48a65;
 }
 
-/* 1. 기본 레이아웃 및 헤더 스타일 */
 /* ------------------------------------------- */
+/* talk */
 .talk-section {
-    padding-top: 0; /* 네비게이션바 아래 공간 확보 */
+    padding-top: 0; 
     background-color: #f6efe7;
     min-height: 100vh;
 }
@@ -456,8 +455,8 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
     padding-top: 120px;
     background-image: linear-gradient(to top,rgba(64, 45, 22, 0.4), rgba(64, 45, 22, 0.1)), url(images/talk_bg.jpg);
     background-size: cover;
-    background-position: center; /* 이미지를 상단 중앙에 배치 */
-    min-height: 400px; /* ⭐️ 수정: 배경 이미지가 더 넓게 보이도록 높이 증가 */
+    background-position: center; 
+    min-height: 400px; 
     
     display: flex;
     flex-direction: column;
@@ -466,8 +465,8 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 
     /* 기존 스타일 */
     text-align: center;
-    padding-bottom: 40px; /* 하단 패딩 */
-    margin-bottom: 80px; /* 헤더와 탭 사이 간격은 탭에 마진으로 줄 예정 */
+    padding-bottom: 40px; 
+    margin-bottom: 80px; 
 }
 
 .talk-title {
@@ -485,9 +484,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-/* ------------------------------------------- */
-/* 2. 탭/카테고리 스타일 */
-/* ------------------------------------------- */
+/* 탭/카테고리 스타일 */
 .category-tabs {
     margin-top: 40px;
     text-align: center;
@@ -515,22 +512,18 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 
 .tab-btn.active,
 .tab-btn:hover {
-    background-color: #6b8f71; /* 녹색 포인트 */
+    background-color: #6b8f71; 
     color: #ffffff;
     border-color: #6b8f71;
 }
 
-/* ------------------------------------------- */
-/* 3. 게시판 (Masonry) 스타일 */
-/* ------------------------------------------- */
+/* talk board */
 .talk-board-container {
     width: 100%;
     max-width: 1400px;
     margin: 20px auto;
     margin-bottom: 100px;
-    
-    /* Masonry 레이아웃 설정 */
-    columns: 4; /* 기본 4열 */
+    columns: 4; 
     column-gap: 20px;
     padding: 0 20px;
 }
@@ -539,7 +532,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 .post-box {
     width: 100%;
     margin-bottom: 20px;
-    break-inside: avoid; /* 열 사이에서 잘리는 것 방지 */
+    break-inside: avoid; 
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -559,7 +552,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
     object-fit: cover;
 }
 
-/* ⭐️ 게시글 헤더 (이미지 2, 3번의 상단 프로필/더보기 영역) */
+/* post 헤더 */
 .post-header {
     display: flex;
     justify-content: space-between;
@@ -574,7 +567,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 }
 .profile-icon {
     font-size: 1.5rem;
-    color: #6b5c4e; /* 갈색 계열 */
+    color: #6b5c4e; 
 }
 .user-nickname {
     font-weight: 700;
@@ -589,7 +582,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
     font-size: 1.1rem;
 }
 
-/* ⭐️ 게시글 내용 및 액션 */
+/* post 내용 및 액션 */
 .post-content {
     padding: 15px;
 }
@@ -607,7 +600,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 }
 .post-tags {
     font-size: 0.8rem;
-    color: #6b8f71; /* 녹색 포인트 */
+    color: #6b8f71; 
     font-weight: 500;
 }
 
@@ -639,9 +632,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
     color: #999;
 }
 
-/* ------------------------------------------- */
-/* 4. 우측 하단 글쓰기 버튼 */
-/* ------------------------------------------- */
+/* 우측 하단 글쓰기 버튼 */
 .write-button {
     position: fixed;
     bottom: 40px;
@@ -649,7 +640,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background-color: #6b8f71; /* 녹색 포인트 */
+    background-color: #6b8f71; 
     color: #fff;
     font-size: 24px;
     border: none;
@@ -667,9 +658,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
     transform: scale(1.05);
 }
 
-/* ------------------------------------------- */
-/* 5. 반응형 (열 개수 조정) */
-/* ------------------------------------------- */
+/* 반응형 (열 개수 조정) */
 @media (max-width: 1200px) {
     .talk-board-container {
         columns: 3;
@@ -686,6 +675,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
     }
 
 }
+
 
 
 
