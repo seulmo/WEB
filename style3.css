@@ -10,7 +10,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 
 /*네비게이션바*/
 .navbar {
-  position: fixed;          /* 화면 상단에 고정 */
+  position: fixed;          
   top: 20px;
   left: 50%;
   width: 90%;
@@ -24,7 +24,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   background-color: #ffffff; 
   color: #402d16;
   transition: all 0.3s ease;
-  z-index: 1000;    /* 다른 요소 위에 표시 */}
+  z-index: 1000;}
 .navbar a {
   color: #402d16;          
   text-decoration: none;
@@ -37,7 +37,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 .menu {
   display: flex;
   align-items: center;
-  gap: 35px; /*네비게이션 링크 간 간격 통일*/
+  gap: 35px; 
 }
 .menu a,
 .menu .dropdown {
@@ -59,11 +59,11 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffffff; /* ⭐️ 수정: 스크롤 전 투명 배경 */
+  background-color: #ffffff; 
   backdrop-filter: none;
   border-radius: 6px;
   padding: 10px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ⭐️ 수정: 투명 배경에선 그림자 제거 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
   min-width: 140px;
   z-index: 1001;
 }
@@ -87,17 +87,13 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-/* login.css */
 
-/* ------------------------------------------- */
-/* 1. 전체 레이아웃 및 배경 (수정) */
-/* ------------------------------------------- */
+/* login.css */
+/* 전체 레이아웃 및 배경 */
 body {
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif; 
-    background-color: #f6efe7; /* 메인 배경색 유지 */
-    
-    /* ⭐️ 수정: min-height: 100vh 제거. 콘텐츠 길이에 따라 body 높이 결정 */
+    background-color: #f6efe7; 
     display: block; 
 }
 
@@ -105,16 +101,12 @@ body {
     width: 100%;
     max-width: 800px; 
     padding: 20px;
-    margin: 0 auto; /* 중앙 정렬 */
-    
-    /* 네비게이션 바 높이(약 120px)만큼 여백을 주어 로그인 박스가 아래로 내려오게 함 */
+    margin: 0 auto; 
     padding-top: 140px; 
-    padding-bottom: 80px; /* 푸터와의 간격 확보 */
+    padding-bottom: 80px; 
 }
 
-/* ------------------------------------------- */
-/* 2. 로그인 박스 스타일 (배치/폭 조정 반영) */
-/* ------------------------------------------- */
+/* 로그인 박스 */
 .login-box {
     background-color: #ffffff;
     padding: 40px;
@@ -138,9 +130,7 @@ body {
     font-weight: 500;
 }
 
-/* ------------------------------------------- */
-/* 3. 입력 필드 (Form) 스타일 */
-/* ------------------------------------------- */
+/* 입력 필드 */
 .input-group {
     text-align: left;
     margin-bottom: 20px;
@@ -179,7 +169,7 @@ body {
     box-shadow: none;
 }
 
-/* 4. 옵션 및 링크 */
+/* 옵션 및 링크 */
 .options {
     display: flex;
     justify-content: space-between;
@@ -214,7 +204,7 @@ body {
     margin: 0 5px;
 }
 
-/* 5. 로그인 버튼 */
+/* 로그인 버튼 */
 .login-btn {
     width: 100%;
     padding: 14px;
@@ -233,7 +223,7 @@ body {
     background-color: #5a7f62;
 }
 
-/* 6. 소셜 로그인 */
+/* 소셜 로그인 */
 .social-login p {
     font-size: 13px;
     color: #999;
@@ -279,7 +269,7 @@ body {
 .social-btn.google { background-color: #db4437; }
 
 
-/* 7. 회원가입 링크 */
+/* 회원가입 링크 */
 .signup-link {
     font-size: 14px;
     color: #6b5c4e;
@@ -298,7 +288,7 @@ body {
 
 /* 푸터 */
 .site-footer {
-  background-color: #ae8f6e; /* 진한 갈색 톤 */
+  background-color: #ae8f6e; 
   color: #fff;
   padding: 40px 10% 50px;
   text-align: center;
@@ -313,8 +303,8 @@ body {
   margin-bottom: 20px;
 }
 .site-footer a {
-  color: inherit;           /* 부모 색상 따라감 */
-  text-decoration: none;   /* 밑줄 제거 */
+  color: inherit;         
+  text-decoration: none;   
 }
 .footer-links a {
   color: #fff;
@@ -350,3 +340,4 @@ body {
 .scroll-top:hover {
   background-color: #b48a65;
 }
+
