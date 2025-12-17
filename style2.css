@@ -10,7 +10,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 
 /*네비게이션바*/
 .navbar {
-  position: fixed;          /* 화면 상단에 고정 */
+  position: fixed;          
   top: 20px;
   left: 50%;
   width: 90%;
@@ -24,7 +24,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   background-color: #ffffff; 
   color: #402d16;
   transition: all 0.3s ease;
-  z-index: 1000;    /* 다른 요소 위에 표시 */}
+  z-index: 1000;}
 .navbar a {
   color: #402d16;          
   text-decoration: none;
@@ -37,7 +37,7 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
 .menu {
   display: flex;
   align-items: center;
-  gap: 35px; /*네비게이션 링크 간 간격 통일*/
+  gap: 35px; 
 }
 .menu a,
 .menu .dropdown {
@@ -59,11 +59,11 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffffff; /* ⭐️ 수정: 스크롤 전 투명 배경 */
+  background-color: #ffffff; 
   backdrop-filter: none;
   border-radius: 6px;
   padding: 10px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ⭐️ 수정: 투명 배경에선 그림자 제거 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
   min-width: 140px;
   z-index: 1001;
 }
@@ -88,7 +88,8 @@ h2, h3, h4, p {font-family: 'Noto Sans KR', sans-serif;}
   display: block;
 }
 
-
+/* ------------------------------ */
+/* test */
 /* 홈화면 */
 .test-home {
   padding: 160px 10% 80px;
@@ -167,9 +168,7 @@ margin-top: 60px;
   background-color: #c96e32;
 }
 
-/* style2.css 파일 수정 */
-
-/* 1. 결과 박스 (.result-box) 전체 스타일 */
+/* 결과 박스 전체 스타일 */
 .result-box {
     max-width: 900px; 
     margin: -10px auto 100px auto;
@@ -181,10 +180,10 @@ margin-top: 60px;
     position: relative;
     background-color: #ffffff; 
 }
-.result-box::before { content: none; } /* 장식 제거 */
+.result-box::before { content: none; } 
 
 
-/* 2. 대표 이미지 스타일 */
+/* 대표 이미지 스타일 */
 .result-image { 
     width: 180px; 
     height: 180px;
@@ -197,25 +196,25 @@ margin-top: 60px;
     background-repeat: no-repeat;
 }
 
-/* 3. 추구미명 및 설명 스타일 */
+/* 추구미명 및 설명 스타일 */
 #result-title { 
     font-size: 30px;
     font-weight: 700;
-    margin-bottom: 5px; /* 추구미명과 설명 사이 간격 줄임 */
+    margin-bottom: 5px; 
     color: #402d16;
 }
 #result-desc { 
     font-size: 16px;
     color: #6b5c4e;
-    margin-bottom: 25px; /* 다음 섹션과의 간격 */
+    margin-bottom: 25px; 
     line-height: 1.5;
 }
 
-/* 4. 비슷한 추구미 (.similar) 스타일 조정 */
+/* 비슷한 추구미 스타일 */
 .similar {
-    margin: 30px 0 10px; /* 위아래 여백 */
+    margin: 30px 0 10px; 
     padding-top: 10px;
-    border-top: 1px solid #e0d9d0; /* 상단 구분선 */
+    border-top: 1px solid #e0d9d0; 
 }
 .similar h3 {
     font-size: 20px;
@@ -224,7 +223,7 @@ margin-top: 60px;
     margin-bottom: 15px;
     color: #402d16;
 }
-/* ⭐️ 비슷한 추구미 리스트 스타일 (ul) */
+/* 비슷한 추구미 리스트 */
 #similar-list {
     list-style: none;
     padding: 0;
@@ -232,20 +231,19 @@ margin-top: 60px;
     font-size: 14px;
     color: #6b8f71; 
     font-weight: 500;
-    /* 추구미 목록을 한 줄로 표시 */
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-/* 5. ⭐️ 통합 추천 섹션 (.recommend-main) 스타일 */
+/* 통합 추천 섹션 스타일 */
 .recommend-main {
     margin-top: 40px;
     padding-top: 40px;
-    border-top: 2px solid #e0d9d0; /* 굵은 구분선 */
+    border-top: 2px solid #e0d9d0; 
 }
 
-/* ⭐️ Introduction (추천 섹션 제목) 스타일 */
+/* recommend */
 .recommend-main h3 {
     font-size: 24px;
     font-weight: 700;
@@ -253,16 +251,16 @@ margin-top: 60px;
     color: #402d16;
 }
 
-/* ⭐️ 3열 카드 그리드 (.recommend-grid) */
+/* 3열 카드 그리드 */
 .recommend-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3개 카드가 한 행에 */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* ⭐️ 추천 개별 카드 스타일 (.recommend-card) */
+/* 추천 개별 카드 */
 .recommend-card {
     background-color: #fcfcfc;
     border-radius: 12px;
@@ -273,7 +271,6 @@ margin-top: 60px;
     padding: 0;
 }
 .recommend-card h4 {
-    /* 코디/아이템/메이크업 제목 */
     font-size: 16px;
     font-weight: 700;
     padding: 10px 0;
@@ -282,21 +279,19 @@ margin-top: 60px;
     border-bottom: 1px solid #eee;
 }
 .recommend-card img {
-    /* 이미지 */
     width: 100%;
-    height: 160px; /* 이미지 높이 고정 */
+    height: 160px; 
     object-fit: cover;
     margin: 0;
     box-shadow: none;
 }
 .item-desc {
-    /* 설명 */
     font-size: 13px;
     color: #6b5c4e;
     padding: 10px;
-    min-height: 40px; /* 설명 영역 최소 높이 확보 */
+    min-height: 40px; 
     line-height: 1.4;
-    display: flex; /* 텍스트 정렬 */
+    display: flex; 
     align-items: center;
     justify-content: center;
 }
@@ -338,7 +333,7 @@ margin-top: 60px;
 
 /* 푸터 */
 .site-footer {
-  background-color: #ae8f6e; /* 진한 갈색 톤 */
+  background-color: #ae8f6e; 
   color: #fff;
   padding: 40px 10% 50px;
   text-align: center;
@@ -353,8 +348,8 @@ margin-top: 60px;
   margin-bottom: 20px;
 }
 .site-footer a {
-  color: inherit;           /* 부모 색상 따라감 */
-  text-decoration: none;   /* 밑줄 제거 */
+  color: inherit;           
+  text-decoration: none;   
 }
 .footer-links a {
   color: #fff;
@@ -423,7 +418,7 @@ margin-top: 60px;
 
 /* 검색 + 정렬 바 */
 .share-toolbar {
-  max-width: 1200px; /* 보드 container 폭과 맞춤 */
+  max-width: 1200px; 
   margin: 0 auto 32px;
   align-items: center;
   justify-content: space-between;
@@ -569,9 +564,9 @@ margin-top: 60px;
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #b97a7a; /* 원하는 색상으로 변경 (예: 핑크톤) */
+  background-color: #b97a7a; 
   color: #fff;
-  font-size: 40px; /* 아이콘 크기 */
+  font-size: 40px; 
   border: none;
   cursor: pointer;
   display: flex;
@@ -582,11 +577,11 @@ margin-top: 60px;
   z-index: 1000;
 }
 .plus-button:hover {
-  background-color: #9e5f5f; /* hover 시 색상 */
+  background-color: #9e5f5f; 
 }
 .plus-button i {
-  font-size: 40px; /* 아이콘 크기 조절 */
-  color: #fff;     /* 아이콘 색상 */
+  font-size: 40px; 
+  color: #fff;     
 }
 
 /*이미지 설명창*/
@@ -715,6 +710,7 @@ margin-top: 60px;
   font-size: 15px;
   line-height: 1.6;
 }
+
 
 
 
