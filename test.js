@@ -276,7 +276,7 @@ function showResult() {
   const similarList = document.getElementById("similar-list");
   similarList.innerHTML = mood.similar.map(s => `<li>${s}</li>`).join("");
 
-  // ⭐️ 통합 추천 섹션에 3가지 카드 출력 (코디, 아이템, 메이크업의 첫 번째 항목)
+  // 통합 추천 섹션에 3가지 카드 출력 (코디, 아이템, 메이크업의 첫 번째 항목)
   const recommendGrid = document.getElementById("recommend-grid");
   recommendGrid.innerHTML = ""; // 기존 내용 초기화
 
@@ -290,7 +290,7 @@ function showResult() {
     { title: "추천 메이크업", data: mood.makeup[0], alt: "메이크업 이미지" }, 
   ];
 
-  // ⭐️ HTML 생성 (3개 카드를 한 행에)
+  // HTML 생성 (3개 카드를 한 행에)
   recommendations.forEach(rec => {
     // 데이터 구조가 {src, desc} 객체이므로 .src와 .desc를 사용
     const src = rec.data ? rec.data.src : ''; 
@@ -320,3 +320,4 @@ function startTest() {
   document.getElementById("test-section").style.display = "block";
   showQuestion();
 }
+
